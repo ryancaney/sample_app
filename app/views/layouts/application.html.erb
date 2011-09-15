@@ -3,8 +3,17 @@
   <head>
     <title><%= title %></title
     <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets.html.erb' %>
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+    <%= render 'layouts/header.html.erb' %>
+      <section class="round">
+        <%= yield %>
+      </section>
+    <%= render 'layouts/footer.html.erb' %>
+    </div>
+      </section>
+    </div>
   </body>
 </html>
