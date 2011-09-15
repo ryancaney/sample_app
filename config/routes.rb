@@ -1,9 +1,24 @@
 SampleApp::Application.routes.draw do
 
+  get "users/new"
+
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
+  match '/signup', :to => 'users#new'
+
+#  root_path => '/'
+#  root_url => 'http://localhost:3000/'
+
+#  contact_path => '/contact'
+# contact_url => 'http://localhost:3000/contact'
+
+#  contact_path => '/about'
+#  contact_url => 'http://localhost:3000/about'
+
+#  contact_path => '/help'
+#  contact_url => 'http://localhost:3000/help'
 
 
   # The priority is based upon order of creation:
